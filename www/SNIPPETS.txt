@@ -1,0 +1,81 @@
+            if ($("#year").val() == '2023, Aug-Round1') {
+                //filename1 = $(stat_var3).val() + '__' + rowX + '__' + colX + '__' + subGrp;
+                filename1 = 'air_cleaner_mold' + '__' + rowX + '__' + colX + '__' + subGrp;
+                console.log(filename1);
+            } else if ($("#year").val() == '2023, Nov-Round2') {
+                //filename1 = $(stat_var3).val() + '__' + rowX + '__' + colX + '__' + subGrp;
+                filename1 = 'adhd_two' + '__' + rowX + '__' + colX + '__' + subGrp;
+                console.log(filename1);
+            }
+
+
+
+        $("#year").change(function () {
+            if ($("#year").val() == '2023, Aug-Round1') {
+                //filename1 = $(stat_var3).val() + '__' + rowX + '__' + colX + '__' + subGrp;
+                filename1 = $("#round1 option:selected").val() + '__' + rowX + '__' + colX + '__' + subGrp;
+                console.log(filename1);
+            } else if ($("#year").val() == '2023, Nov-Round2') {
+                //filename1 = $(stat_var3).val() + '__' + rowX + '__' + colX + '__' + subGrp;
+                filename1 = $("#round2 option:selected").val() + '__' + rowX + '__' + colX + '__' + subGrp;
+                console.log(filename1);
+            }
+        })  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          if ($("#year").val() == '2023, Aug-Round1') {
+                statName2 = $("#round1 option:selected").text();
+                any_sG = statName2.match(/\(by([^)]+)\)/);
+                console.log(statName2);
+                console.log(any_sG);
+            } else if ($("#year").val() == '2023, Nov-Round2') {
+                statName2 = $("#round2 option:selected").text();
+                any_sG = statName2.match(/\(by([^)]+)\)/);
+                console.log(statName2);
+                console.log(any_sG);
+            }
+
+
+        // get subgrp key by checking for (by ___) in statName;
+        $('.subgrp').hide();
+        //statName = stat_var33;
+        statName = $('.stat_var2 option:selected').text();
+        any_sG = statName.match(/\(by([^)]+)\)/);
+
+
+        if (any_sG !== null) {
+            //sG_key = any_sG[1].trim().replaceAll(" ","");
+            sG_key = stat_var.split("_")[0];
+            $('#' + sG_key).show();
+            $("input:radio[name=" + sG_key + "]").each(function () {
+                if ($(this).is(":checked")) {
+                    subGrp = $(this).val();
+                }
+            });
+            console.log(subGrp);
+        } else {
+            subGrp = "";
+        }

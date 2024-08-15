@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html lang="en-us" class="theme-blue">
+<head>
+    <!-- Global Include -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/head-content.html" -->
+    <title>Rapid Surveys System</title>
+
+    <!--<link rel="shortcut icon" href="cdcfavicon.ico">-->
+    <!--<link rel="shortcut icon" href="/NHISDataQueryTool/TemplatePackage/4.0/images/favicon.ico">-->
+    <meta name="robots" content="index, archive" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="cdc:template_version" content="4.0" />
+    <meta property="cdc:last_updated" content="August 27, 2018" />
+    <meta property="cdc:last_reviewed" content="August 27, 2018" />
+    <meta property="cdc:content_source" content="OFFICE OF THE ASSOCIATE DIRECTOR FOR COMMUNICATION" />
+    <meta property="cdc:maintained_by" content="OFFICE OF THE ASSOCIATE DIRECTOR FOR COMMUNICATION" />
+    <link rel="canonical" href="https://wcms-wp-test-br.cdc.gov/php-app-template/index.php" />
+    <meta name="DC.date" content="2018-09-25T11:49:35Z/">
+    <meta name="site-metrics-settings"
+          content="This tag allows for the update/override of metrics settings via data-attributes. Please update the metrics attributes on this tag as needed for your site/page(s)"
+          data-metrics-channel="" />
+
+    <!--<link rel="stylesheet" href="uswds_test5.css">-->
+    <!--<link rel="stylesheet" href="custom5.css">-->
+    <!--  <link rel="stylesheet" href="widget118.css"> -->
+    <!--  <link rel="stylesheet" href="widgetbig058.css"> -->
+    <link rel="stylesheet" href="uswds.css">
+    <link rel="stylesheet" href="custom_ER.css">
+    <link rel="stylesheet" href="widget118.css">
+    <link rel="stylesheet" href="widgetbig058.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body class="no-js">
+
+    <!-- Global Include -->
+    <!-- #include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/global-alert.html" -->
+    <div class="container-fluid header-wrapper">
+        <div class="container">
+            <header role="banner" aria-label="Header" class="pt-2 pb-2">
+                <div class="row">
+                    <div class="col cdc-logo">
+                        <!-- Global Include -->
+                        <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/header-logo.html" -->
+                    </div>
+                </div>
+        </div>
+
+        <div class="container-fluid site-title">
+            <div class="container">
+                <!-- Local Include -->
+                <div class="display-6 text-white fw-500 pt-1 pb-1">
+                    <a href="https://www.cdc.gov/nchs/index.htm">National Center for Health Statistics</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Page Content Wrap -->
+        <div class="container d-flex flex-wrap body-wrapper bg-white">
+            <!-- Content -->
+
+            <main id="main-content">
+
+
+                <div class="info-box ">
+                    <div class="full-screen">
+                        <h2>
+                            Interactive Rapid Surveys System Estimates
+                            <img src="icon_cond.png" alt="conditions" class="app-image" />
+                        </h2>
+                        </h2>
+                        <p>
+                            Rapid Surveys from the National Center for Health Statistics collect timely, relevant data on topics of public health importance.
+                            Surveys are conducted quarterly using probability-based commercial online panels.
+                            Each survey includes a unique set of questions about different public health topics. Data collection for Round 1 occurred during August 2023.
+<p>
+                            Use the options below to select a topic of interest, the data view ("Multiple half years" or "Single half year"), time period, and grouping variables. If you select "Multiple half years," you can choose a range of half years. The "Single half year" view displays a single half year period. Both views allow for stratification by the grouping variables. Once a grouping variable is selected, a dropdown menu will appear, enabling selection of specific levels in each group.
+                        </p>
+                        <p>
+                            After you select the available health topics, the table will automatically be updated. The data can be viewed as a plot under the "Charts" tab, with line graphs for trends over time and grouped bar graphs for the cross-sectional view. The "Technical notes" tab displays a link to technical documentation on the measures and methodology used to produce the estimates. The generated table and graph can be downloaded with the download button <img height="25px" src="download-white.png" alt="download"> under each tab. To view the Korn-Graubard (KG) 95% confidence intervals, select the "95% confidence intervals" checkbox.
+                        </p>
+                    </div>
+                </div>
+                <div class="row full-screen">
+                    <div class="col-sm-12 col-md-3" id="meps-form-container">
+                        <form class="usa-form-large">
+                            <label for="stat_var">Select topic:</label>
+                            <select id="stat_var">
+                                <optgroup label="Air Cleaners or Purifiers: Reasons for/not using">
+                                    <option value="air_cleaner_mold" selected>To remove dust, pollen, mold, or other allergens</option>
+                                    <option value="air_cleaner_smoke">To remove smoke particles from the air</option>
+                                    <option value="air_cleaner_virus">To remove virus particles that people exhale</option>
+                                    <option value="air_cleaner_other"> Some other reason for using portable air cleaner or purifier</option>
+                                    <option value="air_cleaner_expense">Too expensive</option>
+                                    <option value="air_cleaner_noise">Too noisy</option>
+                                    <option value="air_cleaner_noneed">Didn't think one was needed</option>
+                                    <option value="air_cleaner_not_other">Some other reason for not using air cleaner or purifier</option>
+                                </optgroup>
+                                <optgroup label="Ventilation device use">
+                                    <option value="air_cleaner_hepa">Ever uses a portable air cleaner or purifier with a HEPA filter</option>
+                                    <option value="air_cleaner_dkhepa">Ever uses a portable air cleaner or purifier and does not know if it uses a HEPA filter</option>
+                                    <option value="air_cleaner_home">Ever uses portable air cleaner or purifier in home</option>
+                                </optgroup>
+                                <optgroup label="Breast cancer screening">
+                                    <option value="breast_cancer_note">Notified at all about breast density</option>
+                                    <option value="breast_dense">Had dense breast tissue</option>
+                                    <option value="breast_mam">Ever had mammogram</option>
+                                    <option value="breast_cancer_mam">Had mammogram in last 2 years</option>
+                                </optgroup>
+                                <optgroup label="Genetic Tests">
+                                    <option value="genetic_long">Concern it will impact long-term care/disability insurance</option>
+                                    <option value="genetic_ins">Concern it will impact health insurance</option>
+                                    <option value="genetic_risk">Ever heard of genetic test for risk of cancer</option>
+                                    <option value="genetic_emp">Concern it will impact employment</option>
+                                    <option value="genetic_life">Concern it will impact life insurance</option>
+                                    <option value="genetic_can">Ever had genetic test for risk of cancer</option>
+                                </optgroup>
+                                <optgroup label="Gynecological Medical Procedures">
+                                    <option value="gyno_ov_remove">Had both ovaries removed</option>
+                                    <option value="gyno_cut">Had fallopian tubes cut</option>
+                                    <option value="gyno_fal_remove">Had both fallopian tubes removed</option>
+                                    <option value="gyno_tied">Had fallopian tubes tied</option>
+                                </optgroup>
+                                <optgroup label="Long COVID">
+                                    <option value="covid_dep">Believe those with Long COVID may just be depressed</option>
+                                    <option value="covid_emp">Believe employers should accommodate for Long COVID</option>
+                                    <option value="covid_heard">Ever heard of Long COVID</option>
+                                    <option value="covid_exag">Believe media exaggerates Long COVID</option>
+                                    <option value="covid_pain">Believe Long COVID is just normal aches/pains</option>
+                                    <option value="covid_contag">Believe Long COVID can be passed between people</option>
+                                    <option value="covid_ill">Believe Long COVID is a real illness</option>
+                                    <option value="covid_debil">Believe Long COVID can be debilitating</option>
+                                </optgroup>
+                                <optgroup label="Sunscreen">
+                                    <option value="sun_afford">Believe affordability of sunscreen is at least moderately important</option>
+                                    <option value="sun_cloud">Believe there’s no need to worry about the sun on cloudy days</option>
+                                    <option value="sun_skin">Believe how sunscreen feels on skin is at least moderately important</option>
+                                    <option value="sun_ingred">Believe sunscreen’s ingredients are at least moderately important</option>
+                                    <option value="sun_harm">Believe sunburn is not really harmful</option>
+                                    <option value="sun_hassle">Believe it’s a hassle to reapply sunscreen</option>
+                                    <option value="sunscreen_safe">Have concern about safety of ingredients in sunscreen</option>
+                                    <option value="sun_spray">Believe sunscreen’s ability to be sprayed on is at least moderately important</option>
+                                    <option value="sunscreen_face">Wear sunscreen on face and other skin outdoors</option>
+                                    <option value="sunscreen_outdoor">Wear sunscreen on face outdoors</option>
+                                    <option value="sunscreen_skin">Wear sunscreen on other skin outdoors</option>
+                                </optgroup>
+                            </select>
+                            <input id="showSEs" type="checkbox" name="showSEs" value="showSEs" class="" />
+                            <label for="showSEs">95% confidence intervals</label>
+                            <fieldset id="data-view" class="usa-fieldset-inputs usa-sans shiny-input-radiogroup em-fieldset">
+                                <legend class="em-legend">Select data view:</legend>
+                                <!-- <ul class="usa-unstyled-list">   -->
+                                <div class="shiny-options-group">
+                                    <!--<li style="display: inline-block; padding-right: 30px;">-->
+                                    <input id="data-view-trend" type="radio" name="data-view" value="trend" disabled />
+                                    <label for="data-view-trend">Multiple rounds</label>
+                                    <!--</li>-->
+                                    <!--<li style="display: inline-block; padding-right: 30px;">-->
+                                    <input id="data-view-cross" type="radio" name="data-view" value="cross" checked="checked"/>
+                                    <label for="data-view-cross">Single round</label>
+                                    <!--</li>-->
+                                    <!--</li>-->
+                                    <!-- </ul>   -->
+                            </fieldset>
+                            <fieldset>
+                                <legend class="usa-sr-only">Select rounds</legend>
+                                <div class="flex-parent">
+                                    <div class="flex-child-fill year-start">
+                                        <label for="year-start">Round:</label>
+                                        <select id="year-start">
+                                           <option value="2023, Aug-Round1" selected>2023, Aug-Round1</option>
+ <!--                                           <option value="2019, Jul-Dec">2019, Jul-Dec</option>
+                                            <option value="2020, Jan-Jun">2020, Jan-Jun</option>
+                                            <option value="2020, Jul-Dec">2020, Jul-Dec</option>
+                                            <option value="2021, Jan-Jun">2021, Jan-Jun</option>
+                                            <option value="2021, Jul-Dec">2021, Jul-Dec</option>
+                                            <option value="2022, Jan-Jun">2022, Jan-Jun</option>
+                                            <option value="2022, Jul-Dec">2022, Jul-Dec</option>
+                                            <option value="2023, Jan-Jun">2023, Jan-Jun</option>  -->
+
+                                        </select>
+                                    </div>
+                                    <div class="flex-child-fill year-main">
+                                        <label for="year">to:</label>
+                                        <select id="year">
+                                            <option value="2023, Aug-Round1" selected>2023, Aug-Round1</option>
+<!--                                        <option value="2022, Jul-Dec">2022, Jul-Dec</option>
+                                            <option value="2022, Jan-Jun">2022, Jan-Jun</option>
+                                            <option value="2021, Jul-Dec">2021, Jul-Dec</option>
+                                            <option value="2021, Jan-Jun">2021, Jan-Jun</option>
+                                            <option value="2020, Jul-Dec">2020, Jul-Dec</option>
+                                            <option value="2020, Jan-Jun">2020, Jan-Jun</option>
+                                            <option value="2019, Jul-Dec">2019, Jul-Dec</option>
+                                            <option value="2019, Jan-Jun">2019, Jan-Jun</option>-->
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="">
+                                <label for="col_var" class="">Compare by:</label>
+                                <div role="group">
+                                    <div role="group">
+                                        <select id="col_var">
+                                            <optgroup label="Demographic characteristics">
+                                                <option value="ind" selected>Total</option>
+                                                <option value="Sex">Sex</option>
+                                                <option value="agegrps">Age groups</option>
+                                                <option value="hisprace">Hispanic origin and race</option>
+                                                <option value="metro">Urbanicity</option>
+                                                <option value="region">Region</option>
+                                            </optgroup>
+                                            <optgroup label="Socio-economic status">
+                                                <option value="education">Education</option>
+                                                <option value="poverty">Poverty status</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <div class="dropdown black-text" id="colDrop">
+                                            <button type="button" class="usa-accordion-button dropdown-toggle shiny-bound-input arrow-button" data-toggle="dropdown" aria-expanded="false">Select Levels</button>
+                                            <ul class="dropdown-menu dropdown-menu-form" aria-labelledby="colDrop">
+                                                <fieldset id="colLevels" class="usa-fieldset-inputs usa-sans shiny-input-checkboxgroup">
+
+                                                    <legend class="usa-sr-only"></legend>
+                                                    <ul class="usa-unstyled-list">
+                                                        <div class="shiny-options-group">
+                                                            <li>
+                                                                <input id="colLevels-" type="checkbox" name="colLevels" value="" />
+                                                                <label for="colLevels-"></label>
+                                                            </li>
+                                                        </div>
+                                                    </ul>
+                                                </fieldset>
+                                                <button class="action-button  usa-button-outline" id="colReset" type="button">Reset</button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="hide-if-trend">
+                                <fieldset class="">
+                                    <label for="row_var" class="">Group by (rows):</label>
+                                    <div role="group">
+                                        <div role="group">
+                                            <select id="row_var">
+                                                <optgroup label="Number or Percentage">
+                                                    <option value="ind" selected>(none)</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <div class="dropdown black-text" id="rowDrop">
+                                                <button type="button" class="usa-accordion-button dropdown-toggle shiny-bound-input arrow-button" data-toggle="dropdown" aria-expanded="false">Select Levels</button>
+                                                <ul class="dropdown-menu dropdown-menu-form" aria-labelledby="rowDrop">
+                                                    <fieldset id="rowLevels" class="usa-fieldset-inputs usa-sans shiny-input-checkboxgroup">
+
+                                                        <legend class="usa-sr-only"></legend>
+                                                        <ul class="usa-unstyled-list">
+                                                            <div class="shiny-options-group">
+                                                                <li>
+                                                                    <input id="rowLevels-" type="checkbox" name="rowLevels" value="" />
+                                                                    <label for="rowLevels-"></label>
+                                                                </li>
+                                                            </div>
+                                                        </ul>
+                                                    </fieldset>
+                                                    <button class="action-button  usa-button-outline" id="rowReset" type="button">Reset</button>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <button class="action-button  usa-button" id="switchRC" type="button">Switch rows/columns</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-sm-12 col-md-9">
+                        <ul id="meps-tabs" class="nav nav-pills">
+                            <li class="active">
+                                <a data-toggle="tab" href="#table-tab" id="table-pill">
+                                    <span class="tab-title table-tab">Table</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#plot-tab" id="plot-pill">
+                                    <span class="tab-title plot-tab">Charts</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a data-toggle="tab" href="#code-tab" id="code-pill">
+                                    <span class="tab-title code-tab">Technical notes</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="updating-overlay">
+                                <div id="updating-text">Updating, please wait...</div>
+                            </div>
+                            <div id="table-tab" class="tab-pane active">
+                                <div class="caption-block">
+                                    <span id="table-title" class="caption"></span>
+                                    <a id="dl-table" title="" data-original-title="Download table" tabindex="0" class="em-tooltip usa-button download-button">
+                                        <span class="usa-sr-only">Download table</span>
+                                    </a>
+                                    <!--      <span id="table-caption" role="region" aria-live="polite" class="caption"></span> -->
+                                </div>
+                                <div id="loading">Loading data...</div>
+                                <table id="meps-table" cellspacing="0" width="100%"></table>
+                                <div id="table-footnotes" role="region" aria-live="polite">
+                                    <span id="table-caption2"></span>
+                                    <h3>Notes</h3>
+                                    <span id="qnotes"></span>
+                                    <!--         <span id="table-caption3"></span>  -->
+                                    <br>
+                                    <span id="notes"></span>
+                                    <p></p>
+                                    <p>
+                                        Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020.
+                                        Personal visits (with telephone attempts first) resumed in all areas in September 2020. In addition, from August-December 2020, a subsample of adult respondents
+                                        who completed the NHIS in 2019 were recontacted by telephone and asked to participate again. Response rates were lower and respondent characteristics were different
+                                        in April–December 2020. Differences observed in estimates between April–December 2020 and other time periods may have been impacted by these differences in respondent characteristics.
+                                    </p>
+                                <!--    <p>
+                                        Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020.
+                                        This resulted in lower response rates and differences in respondent characteristics for Quarter 2 (April–June).
+                                        Differences observed in estimates between April–June 2020 and earlier time periods may be partially or fully attributable to these changes.
+                                    </p>-->
+                                    <p>
+                                        Based on household interviews of a sample of the civilian noninstitutionalized population. All estimates are based on preliminary data files. Unknowns were not included in the denominators when calculating percentages. For more information on the data source, methods, and definitions used for this table or chart, refer to the
+                                        <a href="https://wwwn.cdc.gov/NHISDataQueryTool/ER_Biannual/earlyrelease202311_tech.pdf" target="_blank_">
+                                            Technical Notes for Early Release Estimates Based on data from the National Health Interview Survey.
+                                        </a>
+                                    </p>
+                                    <h3>Suggested citation</h3>
+                                    <div id="citation"></div>
+                                    </p><p>
+                                        <div id="source"></div>
+                                </div>
+                            </div>
+                            <div id="plot-tab" class="tab-pane">
+                                <div class="caption-block plot-dependent">
+                                    <span id="plot-title" class="caption"></span>
+                                                                        <a id="dl-plot" title="" data-original-title="Download plot" tabindex="0" class="em-tooltip usa-button download-button">
+                                        <span class="usa-sr-only">Download plot</span>
+                                    </a>
+                                    <!--        <span id="plot-caption" role="region" aria-live="polite" class="caption"></span>  -->
+                                </div>
+                                <div id="meps-plot" class="plot-dependent"></div>
+                                <div id="plot-warning">No non-missing data available for selections. Please try again.</div>
+                                <div id="plot-footnotes" class="in-front plot-dependent" role="region" aria-live="polite"></div>
+                                <h3>Notes</h3>
+                                <!--       <span id="plot-caption3"></span>  -->
+                                <span id="plot-qnotes"></span>
+                                <br>
+                                <span id="plotnotes"></span>
+                                <p></p>
+                                <p>
+                                    Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020. 
+                                    Personal visits (with telephone attempts first) resumed in all areas in September 2020. In addition, from August-December 2020, a subsample of adult respondents
+                                    who completed the NHIS in 2019 were recontacted by telephone and asked to participate again. Response rates were lower and respondent characteristics were different
+                                    in April–December 2020. Differences observed in estimates between April–December 2020 and other time periods may have been impacted by these differences in respondent characteristics.
+                                </p><p>
+                                    Based on household interviews of a sample of the civilian noninstitutionalized population.
+                                    All estimates are based on preliminary data files. Unknowns were not included in the denominators
+                                    when calculating percentages. For more information on the data source, methods, and definitions
+                                    used for this table or chart, refer to the
+                                    <a href="https://wwwn.cdc.gov/NHISDataQueryTool/ER_Biannual/earlyrelease202311_tech.pdf" target="_blank_">
+                                        Technical Notes for Early Release Estimates Based on data from the National Health Interview Survey.
+                                    </a>
+                                </p>
+                                <h3>Suggested citation</h3>
+                                <div id="plotcitation"></div>
+                                </p><p>
+                                    <div id="plotsource"></div>
+                            </div>
+                            <div id="code-tab" class="tab-pane">
+                                <h3>Interactive Biannual Early Release Estimates</h3>
+                                <p>
+                                    <!--  Interactive Biannual Early Release Estimates are tables and charts of descriptive statistics for various health measures
+        including health status, health care service access, health care service utilization, and health behaviors.
+        All estimates are unadjusted percentages based on preliminary data files and are released prior to final data editing and final weighting
+        to provide access to the most recent information from the National Health Interview Survey.-->
+                                    For more information on the data source, methods, and definitions used for these tables and charts,
+                                    refer to the
+                                    <a href="https://wwwn.cdc.gov/NHISDataQueryTool/ER_Biannual/earlyrelease202311_tech.pdf" target="_blank_">
+                                        Technical Notes for Early Release Estimates Based on data from the National Health Interview Survey.
+                                    </a>
+                                </p>
+                                <p>
+                                    Estimates based on the 1997–2018 NHIS can be found by clicking the link below:
+                                <p></p>
+                                <a href="https://www.cdc.gov/nchs/nhis/erkeyindicators.htm " target="_blank_">Early Release estimates for key health indicators based on the 1997–2018 NHIS</a>
+                                </p>
+                                Access to the full dataset can be found on Data.CDC.gov by clicking the link below:
+                                <p></p>
+                                <a href="https://data.cdc.gov/dataset/NHIS-Interactive-Biannual-Early-Release-Estimates/trpk-sp8z" target="_blank_">NHIS Interactive Biannual Early Release Estimates</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </main>
+
+
+            <!-- Left / Bottom Nav -->
+
+
+
+
+
+        </div>
+
+        <div>
+            <a class='right usa-button usa-button-big usa-button-outline external-link'
+               href="https://github.com/HHS-NHIS/ER_Biannual" target="_blank">
+
+                View on GitHub <img src="externallink.gif" alt="External Link" height="14" width="14">
+
+            </a>
+
+
+
+            <a class='right usa-button usa-button-big usa-button-secondary'
+               href='mailto:niw2@cdc.gov?Subject=NHIS%20summary%20tables'>
+
+                Send feedback
+
+
+
+            </a>
+        </div>
+    </div>
+
+    <div class="row d-none d-lg-block">
+        <div class="col pca">
+            <!-- Optional Persistent Content Area Here -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col last-reviewed">
+            Page last reviewed:  <span id="last-reviewed-date">August 27, 2018</span>
+            <div class="d-none d-lg-block content-source">
+                Content source:	<a href="/nchs/index.htm" class="td-none">National Center for Health Statistics</a>
+            </div>
+        </div>
+
+    </div>
+    <footer role="contentinfo" aria-label="Footer">
+        <div class="container-fluid footer-wrapper">
+            <div class="container">
+                <!-- Optional global include -->
+                <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/footer-slim.html" -->
+            </div>
+        </div>
+        <div class="container-fluid agency-footer">
+            <div class="container">
+                <!-- Global Include -->
+            </div>
+        </div>
+    </footer>
+    <!-- Global includes -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/social-media-footer.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/metrics.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/scripts.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/svg-symbols.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/svg-round-social.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/svg-white-social.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/svg-audio.html" -->
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/svg-other.html" -->
+    <!-- Add your page or site specific javascript here -->
+    <!-- Add any page or site specific metrics properties here -->
+    <script>
+        s.pageName = document.title;
+        s.channel = "NCHS";
+        siteCatalyst.setAzEntry("");
+        siteCatalyst.setLevel1("");
+        siteCatalyst.setLevel2("");
+        siteCatalyst.setLevel3("");
+        siteCatalyst.setLevel4("");
+        siteCatalyst.setLevel5("");
+    </script>
+    <script>
+        window.shortTitle = "";
+        window.pageOptions = window.pageOptions || {};
+        window.pageOptions.navigation = window.pageOptions.navigation || { fourthLevelNavTitle: "Table of Contents", showFourthLevel: true };
+        window.pageOptions.navigation.breadcrumbs = {
+            mode: 'auto',
+            showCurrentPage: false
+        };
+        window.CDC.tp4.public.appInit(window.pageOptions);
+    </script>
+
+    <!--#include virtual="/NHISDataQueryTool/TemplatePackage/4.0/includes/page-bottom-extras.html" -->
+
+    <script src="datatables.min.js"></script>
+    <script src="plotly-latest.min.js"></script>
+
+    <script src="uswds.min.js"></script>
+
+    <script type="text/javascript" src="rgbcolor.js"></script>
+
+    <script type="text/javascript" src="StackBlur.js"></script>
+
+    <script type="text/javascript" src="canvg.js"></script>
+
+
+
+    <script type="text/javascript" src="basic.js"></script>
+
+    <script src="functions.js"></script>
+    <script src="init.js"></script>
+    <script src="notes.js"></script>
+    <script src="em.js"></script>
+
+
+</body>
+</html>
+
+
