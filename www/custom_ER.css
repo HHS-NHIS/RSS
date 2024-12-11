@@ -142,6 +142,10 @@ label {
   margin-top: 1rem;
   color: white;  /*changed for RSS*/
 }
+label2 {
+    margin-top: 1rem;
+    color: black; /*changed for RSS*/
+}
 select {
   max-width: none;
   cursor: pointer;

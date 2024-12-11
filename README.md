@@ -1,4 +1,4 @@
-# Early Release tables
+# Rapid Survey Systems tables
 
 This repository contains the code needed to create the interactive **Rapid Surveys System (RSS) tables**
 The code is provided for researchers and developers interested in creating similar interactive tables, or in customizing the SHS summary tables for personal use.
