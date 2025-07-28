@@ -89,8 +89,8 @@
                         The Rapid Surveys from the National Center for Health Statistics (NCHS) collects timely, relevant data on topics of public health importance.
                         Surveys are conducted quarterly using probability-based commercial online panels.
                         Each survey includes a unique set of questions about different public health topics.
-                        Data collection for Round 5 occurred during July of 2024.
-                        Use the options below to select data for one of the Round 5 topics presented in this dashboard (Positive Childhood Experiences and Attitudes on Childhood Vaccines).
+                        Data collection for Round 6 occurred between February and March of 2025.
+                        Use the options below to select data for one of the Round 6 topics presented in this dashboard (Stroke Signs and Symptoms, Produce Prescription Programs, HPV test self-collection).
                         Select data for each of these topics may be viewed by demographic and socioeconomic variables.
                         Select a topic and comparison variables using the drop-down menu on the left-side bar.
                         Data may be viewed in table or chart form and more details about the presented estimates are available under Technical Notes.
@@ -144,7 +144,7 @@
                                 <div style="display:none;" class="flex-child-fill year-main">
                                     <label for="year"></label>
                                     <select id="year">
-                                        <option hidden value="July 2024" selected>July 2024</option>
+                                        <option hidden value="February-March, 2025" selected>February-March, 2025</option>
                                         <option hidden value="2023, Nov-Round2">2023, Nov-Round2</option>
                                         <option hidden value="2023, Aug-Round1">2023, Aug-Round1</option>
                                         <!--                                        <option value="2022, Jul-Dec">2022, Jul-Dec</option>
@@ -164,8 +164,9 @@
 
 <select id="group-filter">
  <!-- <option value="all">All Topics</option> -->
-  <option value="PCE">Positive Childhood Experiences</option>
-  <option value="ACV">Attitudes on Childhood Vaccines</option>
+    <option value="Stroke">Stroke Signs and Symptoms</option>
+    <option value="PPP">Produce Prescription Programs</option>
+    <option value="HPV">HPV test self-collection</option>
 </select>
 
 
@@ -176,45 +177,61 @@
         <!-- Options will be dynamically populated -->
         <!--                                        <option value="-1">Select outcome</option>-->
         <!--                                        <optgroup label="Employment">
-            <option value="Employment1" selected> Covered by employment-based health insurance</option>
-            <option value="Employment2"> Covered by employment-based health insurance from family member's employer</option>
-            <option value="Employment3"> Covered by employment-based health insurance from their own employer</option>
-            <option value="Employment4"> Job allows unpaid leave</option>
-            <option value="Employment5"> Job provides paid leave</option>
-            <option value="Employment6"> Job witholds taxes from pay</option>
-            <option value="Employment7"> Not covered, but employer offers health insurance</option>
-            <option value="Employment8"> Currently working</option>
-            <option value="Employment9"> Not working but actively looking for work</option>
-            <option value="Employment10"> Work more than one job</option>
-            <option value="Employment11"> Working over 35 hours per week at main job</option>
-            <option value="Employment12"> Working over 35 hours per week combined from multiple jobs</option>
+        <option value="Employment1" selected> Covered by employment-based health insurance</option>
+        <option value="Employment2"> Covered by employment-based health insurance from family member's employer</option>
+        <option value="Employment3"> Covered by employment-based health insurance from their own employer</option>
+        <option value="Employment4"> Job allows unpaid leave</option>
+        <option value="Employment5"> Job provides paid leave</option>
+        <option value="Employment6"> Job witholds taxes from pay</option>
+        <option value="Employment7"> Not covered, but employer offers health insurance</option>
+        <option value="Employment8"> Currently working</option>
+        <option value="Employment9"> Not working but actively looking for work</option>
+        <option value="Employment10"> Work more than one job</option>
+        <option value="Employment11"> Working over 35 hours per week at main job</option>
+        <option value="Employment12"> Working over 35 hours per week combined from multiple jobs</option>
 
-        </optgroup>    -->
+    </optgroup>    -->
 
-        <optgroup label="Positive Childhood Experiences">
-            <option value="PCE6">Parent has sufficient emotional support</option>
-            <option value="PCE2">Has teachers that care about them</option>
-            <option value="PCE1">Engages in activities with parent</option>
-
-            <option value="PCE3">Neighborhood has a park or playground</option>
-            <option value="PCE4">Neighborhood has sidewalks and walking paths</option>
-            <option value="PCE9">Spends at least 1 hour outside per day</option>
-
-            <option value="PCE7">Participates in clubs, organizations, or lessons/practice</option>
-            <option value="PCE8">Participates in organized sports</option>
-            <option value="PCE5">No difficulty making friends</option>
-            <option value="PCE10">Spends time playing or hanging out with friends in person</option>
+        <optgroup label="Stroke Signs and Symptoms">
+            <option value="STROKE1">Think it is best to call 911 if sudden drooping of face</option>
+            <option value="STROKE2">Think it is best to call 911 if sudden numbness or weakness of arm or leg</option>
+            <option value="STROKE3">Think it is best to call 911 if sudden slurred or garbled speech</option>
+            <option value="STROKE4">Think it is best to call 911 if sudden trouble seeing</option>
+            <option value="STROKE5">Think it is best to call 911 if sudden trouble with walking, dizziness, or balance</option>
+            <option value="STROKE6">Had seen someone having a stroke</option>
+            <option value="STROKE7">Had heard of FAST acronym for stroke symptoms</option>
         </optgroup>
 
-        <optgroup label="Attitudes on Childhood Vaccines">
-            <option value="ACV1">Doctor communicated about getting vaccines for child</option>
-            <option value="ACV6">School or daycare communicated about getting vaccines for child</option>
-            <option value="ACV7">Some other source communicated about getting vaccines for child</option>
+        <optgroup label="Produce Prescription Programs">
+            <option value="PPP1">Received health care in past 12 months</option>
+            <option value="PPP2">Asked if could afford enough food</option>
+      <!--  <option value="PPP3">Answered they were worried food would run out before could afford more</option>
+            <option value="PPP4">Answered they bought food that did not last</option>   --> 
+            <option value="PPP5">Received information on places that provide free food</option>
+            <option value="PPP6">Received information on how to get home-delivered meals</option>
+            <option value="PPP7">Received information about a food assistance program</option>
+            <option value="PPP8">Received information on food services or assistance</option>
+            <option value="PPP9">Received help initiating services from places that provide free food</option>
+            <option value="PPP10">Received help initiating services that help with free meals</option>
+            <option value="PPP11">Received help initiating a food assistance program</option>
+            <option value="PPP12">Received help initiating food services or assistance</option>
+            <option value="PPP13">Received help initiating a produce prescription program</option>
+            <option value="PPP14">Received help initiating food services to manage a medical condition</option>
+      <!--  <option value="PPP15">Used coupons, bucks, gift card to get produce from prescription program</option>
+            <option value="PPP16">Used meals or groceries to manage medical condition</option>  --> 
+        </optgroup>
 
-            <option value="ACV5">Parent thinks it's at least somewhat difficult to get child vaccinated</option>
-            <option value="ACV4">Lack of reliable transportation</option>
-            <option value="ACV2">Due to the cost</option>
-            <option value="ACV3">Hard to find the time</option>
+        <optgroup label="HPV test self-collection">
+            <option value="HPV1">Open to HPV test self-collection</option>
+            <option value="HPV2">Open to HPV test self-collection at home</option>
+            <option value="HPV3">HPV test self-collection would be more private</option>
+            <option value="HPV4">HPV test self-collection would be less stressful</option>
+            <option value="HPV5">HPV test self-collection would be more convenient</option>
+            <option value="HPV6">HPV test self-collection would let them avoid physical exams</option>
+            <option value="HPV7">HPV test self-collection at home would be more convenient</option>
+            <option value="HPV8">HPV test self-collection at home would be more private</option>
+            <option value="HPV9">HPV test self-collection at home is preferred because of difficulty getting to a clinic</option>
+            <option value="HPV10">HPV test self-collection at home is preferred because they dislike seeing a doctor</option>
         </optgroup>
 
 
@@ -245,7 +262,7 @@
                                     <select id="col_var">
                                         <optgroup label="Demographic characteristics">
                                             <option value="ind" selected>Total</option>
-                                            <option value="sex">Gender</option>
+                                            <option value="sex">Sex</option>
                                             <option value="agegrps" selected>Age groups</option>
                                             <option value="race">Race and ethnicity - with Multiracial</option>
                                             <option value="race_aoic">Race and ethnicity - Alone or in combination</option>
@@ -253,6 +270,7 @@
                                             <option value="region">Region</option>
                                         </optgroup>
                                         <optgroup label="Socio-economic status">
+                                            <option value="education">Education</option>
                                             <option value="poverty">Household income</option>
                                         </optgroup>
                                     </select>
@@ -360,7 +378,7 @@
                                 <!--<p>Rapid Surveys are fielded by two commercial survey panels&mdash;<a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). This enables fast data collection with at least 4,000 adult participants each round of data collection.</p>-->
 
                                 <p>
-                                    Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 5 occurred in July 2024.
+                                    Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 6 occurred in February and March of 2025.
                                 </p>
                                 <!--       <p>
                Data were collected from 8,375 adult participants this round using two panels &mdash; <a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). All estimates shown meet the <a href="https://www.cdc.gov/nchs/data/series/sr_02/sr02_175.pdf" target="_blank_">NCHS Data Presentation Standards for Proportions</a>.
@@ -371,11 +389,11 @@
      -->
                                 <p>
                                     For more information on the data source, methods, and definitions used for this table or chart, refer to the
-                                    <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS5/RSS-5_technical_notes_v3.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
+                                    <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/RSS-6_technical_notes_final_r.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
                                 </p>
                                 <p>
-                                    RSS-5 data files with more data on these topics as well as others (with accompanying documentation), can be found at
-                                    <a href="https://wwwdev.cdc.gov/nchs/nhis/rss/round5/access.html" target="_blank_">Data Files and Documentation.</a>
+                                    RSS-6 data files with more data on these topics as well as others (with accompanying documentation), can be found at
+                                    <a href="https://www.cdc.gov/nchs/rss/access.html" target="_blank_">Data Files and Documentation.</a>
                                 </p>
 
                                 <h3>Suggested citation</h3>
@@ -404,7 +422,7 @@
                             <!--<p>Rapid Surveys are fielded by two commercial survey panels&mdash;<a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). This enables fast data collection with at least 4,000 adult participants each round of data collection.</p>-->
 
                             <p>
-                                Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 5 occurred in July 2024.
+                                Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 6 occurred in Febrary and March of 2025.
                             </p>
                             <!--       <p>
                Data were collected from 8,375 adult participants this round using two panels &mdash; <a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). All estimates shown meet the <a href="https://www.cdc.gov/nchs/data/series/sr_02/sr02_175.pdf" target="_blank_">NCHS Data Presentation Standards for Proportions</a>.
@@ -415,11 +433,11 @@
      -->
                             <p>
                                 For more information on the data source, methods, and definitions used for this table or chart, refer to the
-                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS5/RSS-5_technical_notes_v3.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
+                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/RSS-6_technical_notes_final_r.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
                             </p>
                             <p>
-                                RSS-5 data files with more data on these topics as well as others (with accompanying documentation), can be found at
-                                <a href="https://wwwdev.cdc.gov/nchs/nhis/rss/round5/access.html" target="_blank_">Data Files and Documentation.</a>
+                                RSS-6 data files with more data on these topics as well as others (with accompanying documentation), can be found at
+                                <a href="https://www.cdc.gov/nchs/rss/access.html" target="_blank_">Data Files and Documentation.</a>
                             </p>
                             
                             <h3>Suggested citation</h3>
@@ -428,7 +446,7 @@
                                 <div id="plotsource"></div>
                         </div>
                         <div id="code-tab" class="tab-pane">
-                            <h3>Interactive Rapid Surveys System Estimates: Round5</h3>
+                            <h3>Interactive Rapid Surveys System Estimates</h3>
                             <p>
                                 <!--  Interactive Biannual Early Release Estimates are tables and charts of descriptive statistics for various health measures
                                 including health status, health care service access, health care service utilization, and health behaviors.
@@ -436,14 +454,14 @@
                                 to provide access to the most recent information from the National Health Interview Survey.-->
                                 For more information on the data source, methods, and definitions used for these tables and charts,
                                 refer to the
-                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS5/RSS-5_technical_notes_v3.pdf" target="_blank_">
+                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/RSS-6_technical_notes_final_r.pdf" target="_blank_">
                                     Technical Notes for Rapid Surveys System Estimates.
                                 </a>
                             </p>
                             <p>
                                 More information on the Rapid Surveys System can be found by clicking the link below:
                             <p></p>
-                            <a href="https://www.cdc.gov/nchs/rss/about.html" target="_blank_">About Rapid Surveys System</a>
+                            <a href="https://www.cdc.gov/nchs/rapid-surveys/about/index.html" target="_blank_">About Rapid Surveys System</a>
                             </p>
                             Access to the full dataset can be found on Data.CDC.gov by clicking the link below:
                             <p></p>

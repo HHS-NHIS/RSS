@@ -73,7 +73,7 @@ $(document).ready(function () {
                 //filename1 = 'air_cleaner_mold' + '__' + rowX + '__' + colX + '__' + subGrp;
                 //console.log(filename1);
                 $('#round2').val("-1");
-            } else if ($("#year").val() == 'July 2024') {
+            } else if ($("#year").val() == 'February-March, 2025') {
                 $("div.round2 select").val("PCE2");
                 $('#round1').val("-1");
                 //filename1 = 'adhd_two' + '__' + rowX + '__' + colX + '__' + subGrp;
@@ -123,7 +123,7 @@ $(document).ready(function () {
                 //stat_var33 = $("#round1 option:selected").text();
                 //stat_var3 = $("#round1 option:selected").val();
                 //console.log(stat_var3)
-            } else if ($(this).val() == 'July 2024') {
+            } else if ($(this).val() == 'February-March, 2025') {
                // $("#round2").val('adhd_two');
                // $('select.stat_var2') = $('#round2.stat_var2') 
               //  stat_var33 = $("#round1").txt('Ever diagnosed with ADHD');         
@@ -257,7 +257,7 @@ $(document).ready(function () {
             console.log(statName);
             console.log(any_sG);
             //console.log(test);
-        } else if ($("#year").val() == 'July 2024') {
+        } else if ($("#year").val() == 'February-March, 2025') {
             //statName = $("#round2 option:selected").text();
             statName = $("#round2 option:selected").text().replace(/Select outcome/g, "");
             colgrpName = $("#round2 option:selected").text();
@@ -292,7 +292,7 @@ $(document).ready(function () {
         //var yearsRegex = range(yearStart, year).join("|");
 
         // Check if year strings are quarterly:  
-        is_quarterly = year.includes("M");
+        is_quarterly = year.includes("Z");
        // is_quarterly = year.includes("J", "M", "Aug");
         // is_quarterly = year.includes("Q","A");  
 
@@ -414,7 +414,7 @@ $(document).ready(function () {
             });
 
             // Change group column name
-            var grpName = rowX == 'ind' ? 'Round 5' : $('#row_var option:selected').text();
+            var grpName = rowX == 'ind' ? 'Round 6' : $('#row_var option:selected').text();
             table.columns(2).header().toJQuery().text(grpName);
 
 
@@ -1024,7 +1024,7 @@ $(document).ready(function () {
         //    ". Generated interactively: " + today3 + " from https://wwwn.cdc.gov/NHISDataQueryTool/SHS_2019_ADULT3/index.html";
 
         
-        newSource = "<b>Source:</b> " + NCHS + ", " + RSS + ", Round 5, July 2024";
+        newSource = "<b>Source:</b> " + NCHS + ", " + RSS + ", Round 6, February-March, 2025";
         //newSource = "<b>Source:</b> " + NCHS + ", " + NHIS;
         //newSource = NCHS+", "+NHIS+", "+yearName;
         //      newSource = "<b>Source:</b> "+SHS+", "+NCHS+", "+NHIS+", "+yearName;
@@ -1097,7 +1097,7 @@ $(document).ready(function () {
        // var newCitation = NCHS + ". " + titleCaption + ". " + NHIS +
       //      ". Generated interactively: " + today3 + " from https://wwwn.cdc.gov/NHISDataQueryTool///SHS_adult/index.html";
         var newCitation = NCHS + ". " + titleCaption + ". " + RSS +
-            ". Generated interactively: " + today3 + " from https://wwwndev.cdc.gov/NHISDataQueryTool/RSS5/index.html";
+            ". Generated interactively: " + today3 + " from https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/index.html";
         
         plotCaption3 = newCaption3;
         $('#plot-caption3').text(tableCaption3);
@@ -1130,7 +1130,7 @@ $(document).ready(function () {
                     stat_var33 = $("#round1 option:selected").text();
                     stat_var3 = $("#round1 option:selected").val();
                 }
-                if ($(this).attr("value") == "July 2024") {
+                if ($(this).attr("value") == "February-March, 2025") {
                     $(".box").hide();
                     $("#Round2").show();
                     stat_var33 = $("#round2 option:selected").text();
@@ -1145,32 +1145,55 @@ $(document).ready(function () {
     });
 
     const topics = {
-        PCE: [
-            { group: 'Being in nurturing, safe and supportive relationships', value: 'PCE6', text: 'Parent has sufficient emotional support' },
-            { group: 'Being in nurturing, safe and supportive relationships', value: 'PCE2', text: 'Has teachers that care about them' },
-            { group: 'Being in nurturing, safe and supportive relationships', value: 'PCE1', text: 'Engages in activities with parent' },
+        Stroke: [
+            { group: 'Response to stroke symptoms', value: 'STROKE1', text: 'Think it is best to call 911 if sudden drooping of face' },
+            { group: 'Response to stroke symptoms', value: 'STROKE2', text: 'Think it is best to call 911 if sudden numbness or weakness of arm or leg' },
+            { group: 'Response to stroke symptoms', value: 'STROKE3', text: 'Think it is best to call 911 if sudden slurred or garbled speech' },
+            { group: 'Response to stroke symptoms', value: 'STROKE4', text: 'Think it is best to call 911 if sudden trouble seeing' },
+            { group: 'Response to stroke symptoms', value: 'STROKE5', text: 'Think it is best to call 911 if sudden trouble with walking, dizziness, or balance' },
 
-            { group: 'Living in safe, stable, and protective environments', value: 'PCE3', text: 'Neighborhood has a park or playground' },
-            { group: 'Living in safe, stable, and protective environments', value: 'PCE4', text: 'Neighborhood has sidewalks and walking paths' },
-            { group: 'Living in safe, stable, and protective environments', value: 'PCE9', text: 'Spends at least 1 hour outside per day' },
+            { group: 'Stroke experience and awareness', value: 'STROKE6', text: 'Had seen someone having a stroke' },
+            { group: 'Stroke experience and awareness', value: 'STROKE7', text: 'Had heard of FAST acronym for stroke symptoms' },
 
-            { group: 'Opportunities for constructive social engagement and connection', value: 'PCE7', text: 'Participates in clubs, organizations, or lessons/practice' },
-            { group: 'Opportunities for constructive social engagement and connection', value: 'PCE8', text: 'Participates in organized sports' },
-            { group: 'Opportunities for constructive social engagement and connection', value: 'PCE5', text: 'No difficulty making friends' },
-            { group: 'Opportunities for constructive social engagement and connection', value: 'PCE10', text: 'Spends time playing or hanging out with friends in person' },
-             // Add more PCE topics here
+            // Add more Stroke topics here
         ],
-        ACV: [
-            { group: 'Sources of information on childhood vaccines', value: 'ACV1', text: 'Doctor communicated about getting vaccines for child' },
-            { group: 'Sources of information on childhood vaccines', value: 'ACV6', text: 'School or daycare communicated about getting vaccines for child' },
-            { group: 'Sources of information on childhood vaccines', value: 'ACV7', text: 'Some other source communicated about getting vaccines for child' },
+        PPP: [
+            { group: 'Screening for food insecurity', value: 'PPP1', text: 'Received health care in past 12 months' },
+            { group: 'Screening for food insecurity', value: 'PPP2', text: 'Asked if could afford enough food' },
+            //{ group: 'Screening for food insecurity', value: 'PPP3', text: 'Answered they were worried food would run out before could afford more' },
+            //{ group: 'Screening for food insecurity', value: 'PPP4', text: 'Answered they bought food that did not last' },
+            { group: 'Screening for food insecurity', value: 'PPP5', text: 'Received information on places that provide free food' },
+            { group: 'Screening for food insecurity', value: 'PPP6', text: 'Received information on how to get home-delivered meals' },
+            { group: 'Screening for food insecurity', value: 'PPP7', text: 'Received information about a food assistance program' },
+            { group: 'Screening for food insecurity', value: 'PPP8', text: 'Received information on food services or assistance' },
 
-            { group: 'Difficulties getting child vaccinated', value: 'ACV5', text: 'Parent thinks it\'s at least somewhat difficult to get child vaccinated' },
-            { group: 'Difficulties getting child vaccinated', value: 'ACV4', text: 'Lack of reliable transportation' },
-            { group: 'Difficulties getting child vaccinated', value: 'ACV2', text: 'Due to the cost' },
-            { group: 'Difficulties getting child vaccinated', value: 'ACV3', text: 'Hard to find the time' },
+            { group: 'Referrals for food services or assistance', value: 'PPP9', text: 'Received help initiating services from places that provide free food' },
+            { group: 'Referrals for food services or assistance', value: 'PPP10', text: 'Received help initiating services that help with free meals' },
+            { group: 'Referrals for food services or assistance', value: 'PPP11', text: 'Received help initiating a food assistance program' },
+            { group: 'Referrals for food services or assistance', value: 'PPP12', text: 'Received help initiating food services or assistance' },
+            { group: 'Referrals for food services or assistance', value: 'PPP13', text: 'Received help initiating a produce prescription program' },
+            { group: 'Referrals for food services or assistance', value: 'PPP14', text: 'Received help initiating food services to manage a medical condition' },
 
-            // Add more ACV topics here
+           // { group: 'Utilization of food services or assistance', value: 'PPP15', text: 'Used coupons, bucks, gift card to get produce from prescription program' },
+           // { group: 'Utilization of food services or assistance', value: 'PPP16', text: 'Used meals or groceries to manage medical condition' },
+
+            // Add more PPP topics here
+        ],
+        HPV: [
+            { group: 'Testing preferences', value: 'HPV1', text: 'Open to HPV test self-collection' },
+            { group: 'Testing preferences', value: 'HPV2', text: 'Open to HPV test self-collection at home' },
+
+            { group: 'Perceived benefits of HPV test self-collection', value: 'HPV3', text: 'HPV test self-collection would be more private' },
+            { group: 'Perceived benefits of HPV test self-collection', value: 'HPV4', text: 'HPV test self-collection would be less stressful' },
+            { group: 'Perceived benefits of HPV test self-collection', value: 'HPV5', text: 'HPV test self-collection would be more convenient' },
+            { group: 'Perceived benefits of HPV test self-collection', value: 'HPV6', text: 'HPV test self-collection would let them avoid physical exams' },
+
+            { group: 'Reasons for preferring HPV test self-collection at home', value: 'HPV7', text: 'HPV test self-collection at home would be more convenient' },
+            { group: 'Reasons for preferring HPV test self-collection at home', value: 'HPV8', text: 'HPV test self-collection at home would be more private' },
+            { group: 'Reasons for preferring HPV test self-collection at home', value: 'HPV9', text: 'HPV test self-collection at home is preferred because of difficulty getting to a clinic' },
+            { group: 'Reasons for preferring HPV test self-collection at home', value: 'HPV10', text: 'HPV test self-collection at home is preferred because they dislike seeing a doctor' },
+
+            // Add more HPV topics here
         ]
     };
 
@@ -1198,10 +1221,12 @@ $(document).ready(function () {
             });
 
             // Set default selection based on group
-            if (selectedGroup === 'PCE') {
-                topicFilter.value = 'PCE6'; // Default for PCE Test group
-            } else if (selectedGroup === 'ACV') {
-                topicFilter.value = 'ACV1'; // Default for ACV Health group
+            if (selectedGroup === 'Stroke') {
+                topicFilter.value = 'STROKE1'; // Default for Stroke Test group
+            } else if (selectedGroup === 'PPP') {
+                topicFilter.value = 'PPP1'; // Default for PPP Health group
+            } else if (selectedGroup === 'HPV') {
+                topicFilter.value = 'HPV1'; // Default for HPV Health group
             }
 
             // Trigger change event for the topic filter to ensure any related logic is executed
