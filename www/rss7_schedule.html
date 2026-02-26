@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RSS-7 Full Schedule Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    label, input, textarea { display: block; margin: 10px 0; font-size: 14px; }
+    input, textarea { padding: 6px; width: 320px; }
+    button { padding: 8px 16px; font-size: 14px; margin-top: 10px; }
+    .section { background: #ffffcc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+    table { border-collapse: collapse; margin-top: 20px; width: 100%; background: #fff; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #d9edf7; font-weight: bold; }
+    tbody tr:nth-child(even) { background-color: #f2f2f2; }
+    thead th { position: sticky; top: 0; z-index: 2; }
+    h2, h3 { margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+<h2>RSS-7 Full Schedule Dashboard</h2>
+
+<div class="section">
+  <label for="releaseDate">Tentative Release:</label>
+  <input type="date" id="releaseDate" value="2026-01-20">
+
+  <label for="drbDate">DRB Meeting:</label>
+  <input type="date" id="drbDate" value="2025-12-04">
+
+  <label for="holidays">Holidays (comma-separated YYYY-MM-DD):</label>
+  <textarea id="holidays">2025-12-25,2025-12-26,2026-01-01</textarea>
+
+  <button onclick="updateTables()">Update Dates</button>
+</div>
+
+
+    <h3>Table 1: Web Pages and Design</h3>
+    <table>
+      <thead><tr><th>Task</th><th>Updates/Actions Needed</th><th>Steward</th><th>Date to Division Clearance</th><th>Date to OIS (Draft Version)</th><th>Date to Center Clearance</th><th>Final Cleared Version to OIS</th><th>Remediation Plan</th></tr></thead>
+      <tbody><tr><td contenteditable='true'>Wireframes</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>RSS Website Landing Page</td><td contenteditable='true'>Page Layout Design</td><td contenteditable='true'>Amy/Tina</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/18/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>RSS Intranet Page</td><td contenteditable='true'>No changes needed?</td><td contenteditable='true'>Amy/Tina</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/18/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>Data Files and Documentation Page</td><td contenteditable='true'>Design layout for the data files and documentation section</td><td contenteditable='true'>Amy/Tina</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/18/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>Topics and Estimates page</td><td contenteditable='true'>Page Layout Design</td><td contenteditable='true'>Amy/Tina</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/18/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>Topic/Estimates Search tool </td><td contenteditable='true'>Page Layout Design</td><td contenteditable='true'>Tina</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/18/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>Dashboard</td><td contenteditable='true'>Page Layout Design</td><td contenteditable='true'>Tina</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/18/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'></td></tr></tbody>
+    </table>
+    
+
+    <h3>Table 2: Documentation and Files</h3>
+    <table>
+      <thead><tr><th>Task</th><th>Updates/Actions Needed</th><th>Steward</th><th>Date to Division Clearance</th><th>Date to Center Clearance</th><th>Date to OIS</th><th>Remediation Plan</th></tr></thead>
+      <tbody><tr><td contenteditable='true'>Documentation</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>Survey Questionnaire (PDF)</td><td contenteditable='true'>Prepare and remediate web-friendly version of questionnaire/ remediated by RTI</td><td contenteditable='true'>Amy/Tina</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>Remediation by RTI</td></tr><tr><td contenteditable='true'>Codebook (PUF)</td><td contenteditable='true'>Prepare and submit post-DRB approval; request waiver from OIS</td><td contenteditable='true'>Emily</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>OIS to request a waiver</td></tr><tr><td contenteditable='true'>Codebook (RUF)</td><td contenteditable='true'>Request OIS accommodation for restricted-use variables</td><td contenteditable='true'>Emily</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>OIS to request accommodation</td></tr><tr><td contenteditable='true'>CSV Data File</td><td contenteditable='true'>Prepare and upload CSV file </td><td contenteditable='true'>Emily</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>No remediation needed</td></tr><tr><td contenteditable='true'>SAS Data File</td><td contenteditable='true'>Prepare and upload SAS data file </td><td contenteditable='true'>Emily</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>No remediation needed</td></tr><tr><td contenteditable='true'>SAS Input Statements</td><td contenteditable='true'>Prepare and upload SAS input statements </td><td contenteditable='true'>Emily</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>No remediation needed</td></tr><tr><td contenteditable='true'>Technical Notes</td><td contenteditable='true'>Update as needed</td><td contenteditable='true'>Emily</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>OIS will remediate</td></tr><tr><td contenteditable='true'>Survey Description Document (PDF)</td><td contenteditable='true'>Prepare description document and remediate by RTI</td><td contenteditable='true'>Emily</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>RTI will handle remediation</td></tr><tr><td contenteditable='true'>Quality Report;</td><td contenteditable='true'>Submit quality report for remediation by OIS</td><td contenteditable='true'>Katherine & Jim</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>RTI will handle remediation/OIS checks</td></tr><tr><td contenteditable='true'>PRICSSA (PDF)</td><td contenteditable='true'>Submit PRICSSA document for remediation by OIS</td><td contenteditable='true'>Jonaki/Jeannine</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>OIS will remediate</td></tr><tr><td contenteditable='true'>Cognitive Interview Report</td><td contenteditable='true'>Prepare description document and remediate by CCQDER</td><td contenteditable='true'>Grace/Talia</td><td contenteditable='true'>12/04/2025</td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>CCQDER will handle remediation/OIS checks</td></tr><tr><td contenteditable='true'>Misc. Rollout Activities</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'></td></tr><tr><td contenteditable='true'>Infographic Series (5 total)</td><td contenteditable='true'>No graphics needed</td><td contenteditable='true'>Amy/Christine</td><td contenteditable='true'></td><td contenteditable='true'></td><td contenteditable='true'>01/06/2026</td><td contenteditable='true'>No remediation needed</td></tr></tbody>
+    </table>
+    
+
+<script>
+function addBusinessDays(startDate, days, holidays) {
+  const date = new Date(startDate);
+  let added = 0;
+  while (added < days) {
+    date.setDate(date.getDate() + 1);
+    const iso = date.toISOString().split('T')[0];
+    if (date.getDay() !== 0 && date.getDay() !== 6 && !holidays.includes(iso)) added++;
+  }
+  return date.toLocaleDateString('en-US');
+}
+
+function subtractBusinessDays(endDate, days, holidays) {
+  const date = new Date(endDate);
+  let subtracted = 0;
+  while (subtracted < days) {
+    date.setDate(date.getDate() - 1);
+    const iso = date.toISOString().split('T')[0];
+    if (date.getDay() !== 0 && date.getDay() !== 6 && !holidays.includes(iso)) subtracted++;
+  }
+  return date.toLocaleDateString('en-US');
+}
+
+function updateTables() {
+  const release = document.getElementById("releaseDate").value;
+  const drb = document.getElementById("drbDate").value;
+  const holidays = document.getElementById("holidays").value.split(',').map(x => x.trim());
+  if (!release || !drb) {
+    alert("Please enter both DRB and Release dates.");
+    return;
+  }
+  const table1 = document.querySelectorAll('h3:nth-of-type(1) + table tbody tr');
+  table1.forEach(row => {
+    const cells = row.querySelectorAll("td");
+    if (cells[3]) cells[3].innerText = new Date(drb).toLocaleDateString('en-US');
+    if (cells[4]) cells[4].innerText = new Date(drb).toLocaleDateString('en-US');
+    if (cells[5]) cells[5].innerText = addBusinessDays(drb, 14, holidays);
+    if (cells[6]) cells[6].innerText = subtractBusinessDays(release, 10, holidays);
+  });
+
+  const table2 = document.querySelectorAll('h3:nth-of-type(2) + table tbody tr');
+  table2.forEach(row => {
+    const cells = row.querySelectorAll("td");
+    if (cells[3]) cells[3].innerText = new Date(drb).toLocaleDateString('en-US');
+    if (cells[4]) cells[4].innerText = addBusinessDays(drb, 14, holidays);
+    if (cells[5]) cells[5].innerText = subtractBusinessDays(release, 10, holidays);
+  });
+}
+</script>
+
+</body>
+</html>

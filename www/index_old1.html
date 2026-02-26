@@ -89,8 +89,8 @@
                         The Rapid Surveys from the National Center for Health Statistics (NCHS) collects timely, relevant data on topics of public health importance.
                         Surveys are conducted quarterly using probability-based commercial online panels.
                         Each survey includes a unique set of questions about different public health topics.
-                        Data collection for Round 7 occurred in July and August of 2025.
-<!--                    Use the options below to select data for one of the Round 7 topics presented in this dashboard (Lyme disease prevention, GLP-1 medication, Lung cancer screening).  -->
+                        Data collection for Round 6 occurred between February and March of 2025.
+                        Use the options below to select data for one of the Round 6 topics presented in this dashboard (Stroke Signs and Symptoms, Produce Prescription Programs, HPV test self-collection).
                         Select data for each of these topics may be viewed by demographic and socioeconomic variables.
                         Select a topic and comparison variables using the drop-down menu on the left-side bar.
                         Data may be viewed in table or chart form and more details about the presented estimates are available under Technical Notes.
@@ -108,7 +108,7 @@
                     <form class="usa-form-large">
 
                         <fieldset id="data-view" class="usa-fieldset-inputs usa-sans shiny-input-radiogroup em-fieldset">
-                            <legend class="em-legend">Select topic:</legend>
+                            <legend class="em-legend">Select topic category:</legend>
                             <!-- <ul class="usa-unstyled-list">   -->
                             <div class="shiny-options-group">
                                 <!--<li style="display: inline-block; padding-right: 30px;">-->
@@ -144,7 +144,7 @@
                                 <div style="display:none;" class="flex-child-fill year-main">
                                     <label for="year"></label>
                                     <select id="year">
-                                        <option hidden value="July-August, 2025" selected>July-August, 2025</option>
+                                        <option hidden value="February-March, 2025" selected>February-March, 2025</option>
                                         <option hidden value="2023, Nov-Round2">2023, Nov-Round2</option>
                                         <option hidden value="2023, Aug-Round1">2023, Aug-Round1</option>
                                         <!--                                        <option value="2022, Jul-Dec">2022, Jul-Dec</option>
@@ -162,16 +162,17 @@
 
                         <fieldset>
 
-<select id="group-filter" hidden>
- <!--    <option value="Lyme">Lyme disease prevention</option> -->
-    <option value="GLP" selected >GLP-1 medication</option>
- <!--    <option value="Lung">Lung cancer screening</option> -->
+<select id="group-filter">
+ <!-- <option value="all">All Topics</option> -->
+    <option value="Stroke">Stroke Signs and Symptoms</option>
+    <option value="PPP">Produce Prescription Programs</option>
+    <option value="HPV">HPV test self-collection</option>
 </select>
 
 
 
 <div id="Round2" class="box">
-  <!--     <label for="stat_var">Topic:</label> -->
+    <label for="stat_var">Topic:</label>
     <select id="round2" class="stat_var2">
         <!-- Options will be dynamically populated -->
         <!--                                        <option value="-1">Select outcome</option>-->
@@ -191,54 +192,47 @@
 
     </optgroup>    -->
 
-        
-        <optgroup label="Lyme disease prevention">
-            <option value="Lyme1">Annual vaccine</option>
-            <option value="Lyme2">Single dose of antibiotics</option>
-            <option value="Lyme3">Bug spray</option>
-            <option value="Lyme4">Clothing pretreated with permethrin</option>
+        <optgroup label="Stroke Signs and Symptoms">
+            <option value="STROKE1">Think it is best to call 911 if sudden drooping of face</option>
+            <option value="STROKE2">Think it is best to call 911 if sudden numbness or weakness of arm or leg</option>
+            <option value="STROKE3">Think it is best to call 911 if sudden slurred or garbled speech</option>
+            <option value="STROKE4">Think it is best to call 911 if sudden trouble seeing</option>
+            <option value="STROKE5">Think it is best to call 911 if sudden trouble with walking, dizziness, or balance</option>
+            <option value="STROKE6">Had seen someone having a stroke</option>
+            <option value="STROKE7">Had heard of FAST acronym for stroke symptoms</option>
         </optgroup>
 
-        <optgroup label="GLP-1 medication">
-            <option value="GLP5">Use of any GLP-1 medication, past 12 months</option>
-            <option value="GLP6">Currently using any GLP-1 medication</option>
-            <option value="GLP7">Use of any compounded version of GLP-1 medication</option>
-            <option value="GLP8">Primary care doctor or specialist, filled at a pharmacy</option>
-            <option value="GLP9">Online provider</option>
-            <option value="GLP10">Online company that only provides medication</option>
-            <option value="GLP11">Medical spa or cosmetic medical center</option>
-            <option value="GLP12">Somewhere else</option>
-            <option value="GLP13">Any alteration</option>
-            <option value="GLP14">Skipped doses</option>
-            <option value="GLP15">Took less than prescribed</option>
-            <option value="GLP16">Delayed filling a prescription</option>
-            <option value="GLP17">Stopped taking medication entirely</option>
-            <option value="GLP18">Reduced or stopped due to any side effects or symptoms</option>
-
-            <option value="GLP19">Had a prescription for GLP-1 medication</option>
-            <option value="GLP20">Any alteration because was not available</option>
-            <option value="GLP21">Any alteration due to cost</option>
-            <option value="GLP22">Health insurance paid for some or all of the cost of GLP-1 medication</option>
+        <optgroup label="Produce Prescription Programs">
+            <option value="PPP1">Received health care in past 12 months</option>
+            <option value="PPP2">Asked if could afford enough food</option>
+      <!--  <option value="PPP3">Answered they were worried food would run out before could afford more</option>
+            <option value="PPP4">Answered they bought food that did not last</option>   --> 
+            <option value="PPP5">Received information on places that provide free food</option>
+            <option value="PPP6">Received information on how to get home-delivered meals</option>
+            <option value="PPP7">Received information about a food assistance program</option>
+            <option value="PPP8">Received information on food services or assistance</option>
+            <option value="PPP9">Received help initiating services from places that provide free food</option>
+            <option value="PPP10">Received help initiating services that help with free meals</option>
+            <option value="PPP11">Received help initiating a food assistance program</option>
+            <option value="PPP12">Received help initiating food services or assistance</option>
+            <option value="PPP13">Received help initiating a produce prescription program</option>
+            <option value="PPP14">Received help initiating food services to manage a medical condition</option>
+      <!--  <option value="PPP15">Used coupons, bucks, gift card to get produce from prescription program</option>
+            <option value="PPP16">Used meals or groceries to manage medical condition</option>  --> 
         </optgroup>
 
-        <optgroup label="Lung cancer screening">
-            <option value="Lung19">Doctor discussed benefits of lung cancer screening</option>
-            <option value="Lung20">Doctor discussed harms of lung cancer screening</option>
-            <option value="Lung21">Ever had low-dose CT scan of chest area</option>
-            <option value="Lung22">Most recent low-dose CT scan of chest area to check for lung cancer</option>
-            <option value="Lung23">Doctor never recommended</option>
-            <option value="Lung24">Healthy</option>
-            <option value="Lung25">Afraid of being judged/blamed for smoking</option>
-            <option value="Lung26">Hard to find time</option>
-            <option value="Lung27">Hard to get reliable transportation</option>
-            <option value="Lung28">Concerned about exposure to radiation</option>
-            <option value="Lung29">Concerned about other harms</option>
-            <option value="Lung30">At low or no risk of getting lung cancer</option>
-            <option value="Lung31">Knowing the results would cause anxiety or stress</option>
-            <option value="Lung32">Concerned about the cost</option>
-            <option value="Lung33">Some other reason</option>
+        <optgroup label="HPV test self-collection">
+            <option value="HPV1">Open to HPV test self-collection</option>
+            <option value="HPV2">Open to HPV test self-collection at home</option>
+            <option value="HPV3">HPV test self-collection would be more private</option>
+            <option value="HPV4">HPV test self-collection would be less stressful</option>
+            <option value="HPV5">HPV test self-collection would be more convenient</option>
+            <option value="HPV6">HPV test self-collection would let them avoid physical exams</option>
+            <option value="HPV7">HPV test self-collection at home would be more convenient</option>
+            <option value="HPV8">HPV test self-collection at home would be more private</option>
+            <option value="HPV9">HPV test self-collection at home is preferred because of difficulty getting to a clinic</option>
+            <option value="HPV10">HPV test self-collection at home is preferred because they dislike seeing a doctor</option>
         </optgroup>
-
 
 
 
@@ -248,7 +242,7 @@
 
 
                             <div id="Round1" class="box">
-  <!--                                 <label for="stat_var">Topic:</label> -->
+                                <label for="stat_var">Topic:</label>
                                 <select id="round1" class="stat_var2">
                                     <option value="-1" selected>Select outcome</option>
 
@@ -384,7 +378,7 @@
                                 <!--<p>Rapid Surveys are fielded by two commercial survey panels&mdash;<a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). This enables fast data collection with at least 4,000 adult participants each round of data collection.</p>-->
 
                                 <p>
-                                    Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 7 occurred in July and August of 2025.
+                                    Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 6 occurred in February and March of 2025.
                                 </p>
                                 <!--       <p>
                Data were collected from 8,375 adult participants this round using two panels &mdash; <a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). All estimates shown meet the <a href="https://www.cdc.gov/nchs/data/series/sr_02/sr02_175.pdf" target="_blank_">NCHS Data Presentation Standards for Proportions</a>.
@@ -395,10 +389,10 @@
      -->
                                 <p>
                                     For more information on the data source, methods, and definitions used for this table or chart, refer to the
-                                    <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS7/RSS-6-technical-notes-final.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
+                                    <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/RSS-6-technical-notes-final.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
                                 </p>
                                 <p>
-                                    RSS-7 data files with more data on these topics as well as others (with accompanying documentation), can be found at
+                                    RSS-6 data files with more data on these topics as well as others (with accompanying documentation), can be found at
                                     <a href="https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html" target="_blank_">Data Files and Documentation.</a>
                                 </p>
 
@@ -428,7 +422,7 @@
                             <!--<p>Rapid Surveys are fielded by two commercial survey panels&mdash;<a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). This enables fast data collection with at least 4,000 adult participants each round of data collection.</p>-->
 
                             <p>
-                                Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 7 occurred in July and August of 2025.
+                                Rapid Surveys from the National Center for Health Statistics (NCHS) collect timely, relevant data on topics of public health importance. Surveys are conducted several times a year using probability-based commercial online panels. Each survey includes a unique set of questions about different public health topics. Data collection for Round 6 occurred in Febrary and March of 2025.
                             </p>
                             <!--       <p>
                Data were collected from 8,375 adult participants this round using two panels &mdash; <a href="https://amerispeak.norc.org/" class="tp-link-policy" data-domain-ext="org">AmeriSpeak<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by NORC at the University of Chicago) and&nbsp;<a href="https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel" class="tp-link-policy" data-domain-ext="com">KnowledgePanel<span aria-label="external icon" class="sr-only" role="img"></span><span class="fi cdc-icon-external x16 fill-external" alt="" aria-hidden="true"></span></a>&nbsp;(conducted by Ipsos). All estimates shown meet the <a href="https://www.cdc.gov/nchs/data/series/sr_02/sr02_175.pdf" target="_blank_">NCHS Data Presentation Standards for Proportions</a>.
@@ -439,10 +433,10 @@
      -->
                             <p>
                                 For more information on the data source, methods, and definitions used for this table or chart, refer to the
-                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS7/RSS-6-technical-notes-final.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
+                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/RSS-6-technical-notes-final.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
                             </p>
                             <p>
-                                RSS-7 data files with more data on these topics as well as others (with accompanying documentation), can be found at
+                                RSS-6 data files with more data on these topics as well as others (with accompanying documentation), can be found at
                                 <a href="https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html" target="_blank_">Data Files and Documentation.</a>
                             </p>
                             
@@ -460,7 +454,7 @@
                                 to provide access to the most recent information from the National Health Interview Survey.-->
                                 For more information on the data source, methods, and definitions used for these tables and charts,
                                 refer to the
-                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS7/RSS-6-technical-notes-final.pdf" target="_blank_">
+                                <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS6/RSS-6-technical-notes-final.pdf" target="_blank_">
                                     Technical Notes for Rapid Surveys System Estimates.
                                 </a>
                             </p>
@@ -597,8 +591,8 @@
 
     <script src="functions.js"></script>
     <script src="init.js"></script>
-    <script src="notes_updated.js"></script>
-    <script src="em11.7.24_updated.js"></script>
+    <script src="notes.js"></script>
+    <script src="em11.7.24.js"></script>
 
 
 </body>

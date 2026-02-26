@@ -90,7 +90,7 @@
                         Surveys are conducted quarterly using probability-based commercial online panels.
                         Each survey includes a unique set of questions about different public health topics.
                         Data collection for Round 7 occurred in July and August of 2025.
-<!--                    Use the options below to select data for one of the Round 7 topics presented in this dashboard (Lyme disease prevention, GLP-1 medication, Lung cancer screening).  -->
+                        Use the options below to select data for one of the Round 7 topics presented in this dashboard (Lyme disease prevention, GLP-1 medication, Lung cancer screening).
                         Select data for each of these topics may be viewed by demographic and socioeconomic variables.
                         Select a topic and comparison variables using the drop-down menu on the left-side bar.
                         Data may be viewed in table or chart form and more details about the presented estimates are available under Technical Notes.
@@ -108,7 +108,7 @@
                     <form class="usa-form-large">
 
                         <fieldset id="data-view" class="usa-fieldset-inputs usa-sans shiny-input-radiogroup em-fieldset">
-                            <legend class="em-legend">Select topic:</legend>
+                            <legend class="em-legend">Select topic category:</legend>
                             <!-- <ul class="usa-unstyled-list">   -->
                             <div class="shiny-options-group">
                                 <!--<li style="display: inline-block; padding-right: 30px;">-->
@@ -162,16 +162,16 @@
 
                         <fieldset>
 
-<select id="group-filter" hidden>
- <!--    <option value="Lyme">Lyme disease prevention</option> -->
-    <option value="GLP" selected >GLP-1 medication</option>
- <!--    <option value="Lung">Lung cancer screening</option> -->
+<select id="group-filter">
+    <option value="Lyme">Lyme disease prevention</option>
+    <option value="GLP">GLP-1 medication</option>
+    <option value="Lung">Lung cancer screening</option>
 </select>
 
 
 
 <div id="Round2" class="box">
-  <!--     <label for="stat_var">Topic:</label> -->
+    <label for="stat_var">Topic:</label>
     <select id="round2" class="stat_var2">
         <!-- Options will be dynamically populated -->
         <!--                                        <option value="-1">Select outcome</option>-->
@@ -214,11 +214,6 @@
             <option value="GLP16">Delayed filling a prescription</option>
             <option value="GLP17">Stopped taking medication entirely</option>
             <option value="GLP18">Reduced or stopped due to any side effects or symptoms</option>
-
-            <option value="GLP19">Had a prescription for GLP-1 medication</option>
-            <option value="GLP20">Any alteration because was not available</option>
-            <option value="GLP21">Any alteration due to cost</option>
-            <option value="GLP22">Health insurance paid for some or all of the cost of GLP-1 medication</option>
         </optgroup>
 
         <optgroup label="Lung cancer screening">
@@ -248,7 +243,7 @@
 
 
                             <div id="Round1" class="box">
-  <!--                                 <label for="stat_var">Topic:</label> -->
+                                <label for="stat_var">Topic:</label>
                                 <select id="round1" class="stat_var2">
                                     <option value="-1" selected>Select outcome</option>
 
@@ -398,7 +393,7 @@
                                     <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS7/RSS-6-technical-notes-final.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
                                 </p>
                                 <p>
-                                    RSS-7 data files with more data on these topics as well as others (with accompanying documentation), can be found at
+                                    RSS-6 data files with more data on these topics as well as others (with accompanying documentation), can be found at
                                     <a href="https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html" target="_blank_">Data Files and Documentation.</a>
                                 </p>
 
@@ -442,7 +437,7 @@
                                 <a href="https://wwwndev.cdc.gov/NHISDataQueryTool/RSS7/RSS-6-technical-notes-final.pdf" target="_blank_">Technical Notes for Rapid Surveys System Estimates.</a>
                             </p>
                             <p>
-                                RSS-7 data files with more data on these topics as well as others (with accompanying documentation), can be found at
+                                RSS-6 data files with more data on these topics as well as others (with accompanying documentation), can be found at
                                 <a href="https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html" target="_blank_">Data Files and Documentation.</a>
                             </p>
                             
